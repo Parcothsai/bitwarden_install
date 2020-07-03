@@ -2,7 +2,8 @@
 set -e
 EMAIL=$1
 LASTEST_VERSION="latest.tar.gz"
-INSTALL_DIR="bitwarden_install-latest"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 
 ############ FUNCTION ############
 send_email()
@@ -20,7 +21,7 @@ Id=$(cat response.json | jq '.Id' | sed 's/"//g')
 Key=$(cat response.json | jq '.Key' | sed 's/"//g')
 
 ############ INSTALL BITWARDEN ############
-bash $INSTALL_DIR/bitwarden.sh install <<EOF
+bash $DIR/bitwarden.sh install <<EOF
 localhost
 $Id
 $Key
@@ -29,5 +30,5 @@ n
 n
 EOF
 ############ START BITWARDEN ############
-bash $INSTALL_DIR/bitwarden.sh start
+bash $DIR/bitwarden.sh start
 rm -r $LASTEST_VERSION
