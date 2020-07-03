@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 EMAIL=$1
-LASTEST_VERSION="version6.tar.gz"
-INSTALL_DIR="bitwarden_install-version6"
+LASTEST_VERSION="latest.tar.gz"
+INSTALL_DIR="bitwarden_install-latest"
 
 ############ FUNCTION ############
 send_email()
