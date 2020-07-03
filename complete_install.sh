@@ -19,7 +19,8 @@ if [[ -f repsonse.json ]]; then
 fi
 # VERSION="version2.tar.gz"
 # BITWARDEN="bitwarden.tar.gz"
-INSTALL_DIR="bitwarden_install-version2"
+#INSTALL_DIR="bitwarden_install-version2"
+INSTALL_DIR="."
 # wget https://github.com/Parcothsai/bitwarden_install/archive/$VERSION
 # mv $VERSION $BITWARDEN
 # tar xvf $BITWARDEN
