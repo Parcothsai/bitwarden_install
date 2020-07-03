@@ -19,10 +19,6 @@ curl 'https://api.bitwarden.com/installations'   -H 'authority: api.bitwarden.co
 Id=$(cat response.json | jq '.Id' | sed 's/"//g')
 Key=$(cat response.json | jq '.Key' | sed 's/"//g')
 
-############ REMOVE SENSITIVE FILE ############
-if [[ -f ../repsonse.json ]]; then
-	rm ../response.json
-fi
 ############ INSTALL BITWARDEN ############
 bash $INSTALL_DIR/bitwarden.sh install <<EOF
 localhost
