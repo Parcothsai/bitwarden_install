@@ -17,9 +17,9 @@ Key=$(cat response.json | jq '.Key' | sed 's/"//g')
 if [[ -f repsonse.json ]]; then
 	rm response.json
 fi
-LASTEST_VERSION="version4.tar.gz"
+LASTEST_VERSION="version5.tar.gz"
 # BITWARDEN="bitwarden.tar.gz"
-INSTALL_DIR="bitwarden_install-version4"
+INSTALL_DIR="bitwarden_install-version5"
 # wget https://github.com/Parcothsai/bitwarden_install/archive/$VERSION
 # mv $VERSION $BITWARDEN
 # tar xvf $BITWARDEN
@@ -32,4 +32,4 @@ n
 n
 EOF
 bash $INSTALL_DIR/bitwarden.sh start
-rm -r ../$LASTEST_VERSION
+rm -r $LASTEST_VERSION
