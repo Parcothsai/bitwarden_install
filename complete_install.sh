@@ -17,12 +17,12 @@ Key=$(cat response.json | jq '.Key' | sed 's/"//g')
 if [[ -f repsonse.json ]]; then
 	rm response.json
 fi
-VERSION="version2.tar.gz"
-BITWARDEN="bitwarden.tar.gz"
+# VERSION="version2.tar.gz"
+# BITWARDEN="bitwarden.tar.gz"
 INSTALL_DIR="bitwarden_install-version2"
-wget https://github.com/Parcothsai/bitwarden_install/archive/$VERSION
-mv $VERSION $BITWARDEN
-tar xvf $BITWARDEN
+# wget https://github.com/Parcothsai/bitwarden_install/archive/$VERSION
+# mv $VERSION $BITWARDEN
+# tar xvf $BITWARDEN
 bash $INSTALL_DIR/bitwarden.sh install <<EOF
 localhost
 $Id
