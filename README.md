@@ -4,7 +4,7 @@
 	-  Docker
 	-  docker-compose
 	-  wget
-	- jq
+	-  jq
 
 ## GET LAST RELEASE
 
